@@ -1,0 +1,26 @@
+# solproxy
+
+###https://learnblockchain.cn/article/4282
+
+创建一个可升级的合约
+在本地测试该合约
+将合约部署到公共网络上
+将升级的控制权转移到Gnosis 多签账号中!
+创建新的实现版本
+在本地测试升级
+部署新的实现
+升级合约
+
+在以上任务中，你已经在本地测试网和公共测试网Ropsten建立并部署了代理合约。你可以继续做更多，例如：
+* 使用OpenZeppelin Defender来管理升级。
+* 将ProxyAdmin所有者转移到一个多签名地址，如Gnosis Safe多签名钱包。
+
+由于技术上的限制，当你把一个合约升级到新版本时，你不能改变该合约的存储布局。
+这意味着，如果你已经在合约中声明了一个状态变量，你不能删除它，改变它的类型，或在它之前声明另一个变量。
+在我们的Box例子中，这意味着我们只能在原有值之后添加新的状态变量。
+
+在学习如何升级合同时，您可能会发现自己在当地环境中处于合同冲突的境地。要解决这个问题，请考虑使用以下步骤：
+停止使用npx hardhat node运行的节点ctrl+C。执行清洁：npx hardhat clean
+
+目前升级到V3，升级到V4会报错，错误如下：
+https://forum.openzeppelin.com/t/error-deployment-at-0x-address-is-not-registered/4866/14
