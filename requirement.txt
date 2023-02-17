@@ -1,6 +1,6 @@
 # solproxy
 
-###https://learnblockchain.cn/article/4282
+# https://learnblockchain.cn/article/4282
 
 创建一个可升级的合约
 在本地测试该合约
